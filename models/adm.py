@@ -218,7 +218,7 @@ def criar_banco_e_restaurar_dump_2(
         if novo_email:
             dump_data = dump_data.replace("admin@example.com", novo_email)
         if nova_senha:
-            dump_data = dump_data.replace("$2b$12$ZR6YSX.aaa", nova_senha)
+            dump_data = dump_data.replace("senha#default", nova_senha)
 
         # Executar o SQL de dump diretamente no banco
         for statement in dump_data.split(';'):
