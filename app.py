@@ -18,19 +18,20 @@ app = FastAPI(
 
 
 origins = [
-    "http://127.0.0.1",
+    "https://app.sysfit.com.br",  # Frontend via HTTPS
+    "http://127.0.0.1",  # Se estiver usando local
     "http://localhost",
-    # Se quiser liberar todos, pode usar "*"
-    "*"
+    "*",  # Caso queira permitir todas as origens
 ]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,          # Domínios liberados para requisição
+    allow_origins=origins,           # Domínios liberados para requisição
     allow_credentials=True,
-    allow_methods=["*"],            # Permite todos os métodos (GET, POST, etc)
-    allow_headers=["*"],            # Permite todos os headers
+    allow_methods=["*"],             # Permite todos os métodos (GET, POST, etc)
+    allow_headers=["*"],             # Permite todos os headers
 )
+
 #define a classe basemodel para login
 class LoginRequest(BaseModel):
     cnpj_cpf: str
