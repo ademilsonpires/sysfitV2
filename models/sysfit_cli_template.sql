@@ -133,6 +133,8 @@ CREATE TABLE `planos` (
   `PL_DATA_CADASTRO` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
+
+
 --
 -- Estrutura para tabela `serie`
 --
@@ -194,7 +196,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`USR_ID`, `USR_NOME`, `USR_DTA_NASCIMENTO`, `USR_DTA_CADASTRO`, `USR_TIPO`, `USR_LOGIN`, `USR_SENHA`, `USR_TOKEN`, `USR_USR_CADASTRO_ID`, `USR_CPF`, `USR_TELEFONE`, `USR_EMAIL`, `USR_STATUS`) VALUES
-(4, 'admin', '1990-05-20', '2025-05-22 17:19:44', 'ADM', 'admin@example.com', '$2b$12$ZR6YSX.1E4TyyWxf5BptvuFqTNqWk0kGls0cy3qnLQgHeQVxJhsyi', null, 1, '123.456.789-01', '(31) 99999-9999', 'admin@example.com', 'A');
+(4, 'admin', '1990-05-20', '2025-05-22 17:19:44', 'ADM', 'admin', '$2b$12$ZR6YSX.1E4TyyWxf5BptvuFqTNqWk0kGls0cy3qnLQgHeQVxJhsyi', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2Fvc2lsdmEifQ.kB3PBCB6U4W0cD8DO6u6vUijz0K9bzfzDJ6aKVLtzAc', 1, '123.456.789-01', '(31) 99999-9999', 'admin@example.com', 'A');
 
 --
 -- Índices para tabelas despejadas
