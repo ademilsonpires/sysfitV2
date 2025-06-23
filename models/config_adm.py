@@ -13,7 +13,7 @@ DB_NAME = "slzdominios_sysfit_adm"
 
 # Configurações fixas de acesso ao MySQL e dump
 MYSQL_USER = "slzdominios_webmoney"
-MYSQL_PASSWORD = "PQHxium1VewsgtQT"
+MYSQL_PASSWORD = "VYcanismajoris1#"
 MYSQL_HOST = "31.220.52.31"
 MYSQL_PORT = 3306
 DUMP_FILE_PATH = "sysfit_cli_template.sql"  # arquivo dump no mesmo diretório do script
