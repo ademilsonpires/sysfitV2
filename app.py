@@ -80,7 +80,7 @@ def criar_usuario(request: UsuarioCreateRequest, token: str = Header(...)):
     db_name = dados_cliente.get("banco_de_dados")
     user = dados_cliente.get("usuario")
     password = dados_cliente.get("senha")
-    host = "localhost"  # ajustar se necessário
+    host = MYSQL_HOST  # ajustar se necessário
 
     # Validar token direto
     usuario_autenticado = get_usuario_por_token(db_name, user, password, token, host)
@@ -115,10 +115,11 @@ def lista_usuarios(cpf_cnpj: str, token: str = Header(...)):
         raise HTTPException(status_code=404, detail="Cliente não encontrado")
 
     dados_cliente = json.loads(dados_cliente_json)
+    print(dados_cliente)
     db_name = dados_cliente.get("banco_de_dados")
     user = dados_cliente.get("usuario")
     password = dados_cliente.get("senha")
-    host = "localhost"  # ajustar se necessário
+    host = MYSQL_HOST  # ajustar se necessário
 
     # Validar token direto
     usuario_autenticado = get_usuario_por_token(db_name, user, password, token, host)
@@ -151,7 +152,7 @@ def lista_usuario_id(cpf_cnpj: str,usr_id: int, token: str = Header(...)):
     db_name = dados_cliente.get("banco_de_dados")
     user = dados_cliente.get("usuario")
     password = dados_cliente.get("senha")
-    host = "localhost"  # ajustar se necessário
+    host = MYSQL_HOST  # ajustar se necessário
 
     # Validar token direto
     usuario_autenticado = get_usuario_por_token(db_name, user, password, token, host)
@@ -192,7 +193,7 @@ def update_usuario_dinam(cpf_cnpj: str, token: str, usr_id: int, request: Update
     db_name = dados_cliente.get("banco_de_dados")
     user = dados_cliente.get("usuario")
     password = dados_cliente.get("senha")
-    host = "localhost"  # ajustar se necessário
+    host = MYSQL_HOST  # ajustar se necessário
 
     # Validar token direto
     usuario_autenticado = get_usuario_por_token(db_name, user, password, token, host)
@@ -250,7 +251,7 @@ async def update_usuario_cadastro_completo(cpf_cnpj: str, usr_id: int, usuario_d
     db_name = dados_cliente.get("banco_de_dados")
     user = dados_cliente.get("usuario")
     password = dados_cliente.get("senha")
-    host = "localhost"  # ajustar se necessário
+    host = MYSQL_HOST  # ajustar se necessário
 
     # Validar token direto
     usuario_autenticado = get_usuario_por_token(db_name, user, password, token, host)
