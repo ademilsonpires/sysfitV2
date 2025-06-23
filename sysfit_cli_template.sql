@@ -179,7 +179,7 @@ CREATE TABLE `usuarios` (
   `USR_DTA_NASCIMENTO` date NOT NULL,
   `USR_DTA_CADASTRO` datetime DEFAULT current_timestamp(),
   `USR_TIPO` char(20) NOT NULL,
-  `USR_LOGIN` char(20) NOT NULL,
+  `USR_LOGIN` char(255) NOT NULL,
   `USR_SENHA` char(255) NOT NULL,
   `USR_TOKEN` varchar(255) DEFAULT NULL,
   `USR_USR_CADASTRO_ID` int(11) NOT NULL,
